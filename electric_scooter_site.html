@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-WHEELZ</title>
+  <link rel="icon" href="ewheelz-e-icon.jpeg" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out both;
+    }
+    .scroll-fade {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1s ease-out;
+    }
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="ewheelz-logo.png" alt="E-WHEELZ" class="h-10 w-auto rounded">
+      </div>
+
+      <!-- Hamburger Menu Button (Mobile Only) -->
+      <button id="menu-button" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Nav Links (Desktop) -->
+      <nav class="hidden md:flex space-x-6 text-white">
+        <a href="#" class="hover:text-green-400">Home</a>
+        <a href="#models" class="hover:text-green-400">Models</a>
+        <a href="#about" class="hover:text-green-400">About</a>
+        <a href="#contact" class="hover:text-green-400">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Nav Links (Mobile Dropdown) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-black px-4 pb-4 text-right">
+      <a href="#" class="block py-2 text-white hover:text-green-400">Home</a>
+      <a href="#models" class="block py-2 text-white hover:text-green-400">Models</a>
+      <a href="#about" class="block py-2 text-white hover:text-green-400">About</a>
+      <a href="#contact" class="block py-2 text-white hover:text-green-400">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-[80vh] bg-black flex flex-col items-center justify-center text-center text-white px-4">
+    <img src="ewheelz-logo.png" alt="Best Model Front View" class="w-full max-w-3xl mx-auto rounded-lg shadow-lg">
+  </section>
+
+  <!-- Models Section -->
+  <section id="models" class="max-w-7xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">Our Models</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="nozzel.png" alt="Nozzel" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Nozzel</h3>
+          <p class="text-gray-600 mb-2">Price: ₹45,000</p>
+          <a href="#" class="text-green-600 font-medium hover:underline">View Details</a>
+        </div>
+      </div>
+      
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="booster.webp" alt="Booster" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Booster</h3>
+          <p class="text-gray-600 mb-2">Price: ₹50,000</p>
+          <a href="#" class="text-green-600 font-medium hover:underline">View Details</a>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="Alfa-Plus3.webp" alt="Alfa" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Alfa</h3>
+          <p class="text-gray-600 mb-2">Price: ₹64,000</p>
+          <a href="#" class="text-green-600 font-medium hover:underline">View Details</a>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="Vespro-U-8-View.webp" alt="Vespro" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Vespro</h3>
+          <p class="text-gray-600 mb-2">Starting: ₹64,000</p>
+          <a href="#" class="text-green-600 font-medium hover:underline">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    &copy; 2025 E-WHEELZ. All rights reserved.
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    const fadeElements = document.querySelectorAll('.scroll-fade');
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
