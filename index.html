@@ -66,6 +66,43 @@
     object-fit: contain;
 
     }
+    .scooter {
+            /* Set the dimensions of our icon */
+            width: 90px;
+            height: 90px;
+            z-index: 1;
+            /*
+             * CSS Filter: This is the key change.
+             * 'invert(1)' inverts all the colors in the image.
+             * Since the source image is black on a transparent background,
+             * this will make the scooter icon appear white.
+            */
+            left: 0; 
+            /* Use absolute positioning to place it relative to the body */
+            position: absolute;
+            /* Position it near the bottom of the screen */
+            bottom: 15%;
+            
+            /* Link our animation to this element */
+            animation: moveScooter 6s linear infinite;
+        }
+
+        /*
+         * Keyframes define the stages of our animation.
+         * The animation direction is now reversed to move from left to right.
+        */
+        @keyframes moveScooter {
+            /* 0% is the starting point of the animation */
+            0% {
+                /* Start just off-screen to the left */
+                transform: translateX(-100%); 
+            }
+            /* 100% is the ending point of the animation */
+            100% {
+                /* End just off-screen to the right */
+                transform: translateX(100vw);
+            }
+        }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -106,7 +143,8 @@
 
   <!-- Hero Section -->
   <section class="min-h-[80vh] bg-black flex flex-col items-center justify-center text-center text-white px-4">
-    <img src="ewheelz-logo.png" alt="Best Model Front View" class="w-full max-w-3xl mx-auto rounded-lg shadow-lg">
+      <img src="ewheelz-logo.png" alt="Best Model Front View" class="w-full max-w-3xl mx-auto rounded-lg shadow-lg front-image">
+      <img class="scooter" src="scoo.png">
   </section>
 
   <!-- Models Section -->
@@ -221,7 +259,7 @@
           <h3 class="text-xl font-semibold mb-2">Taliparamba (Manna)</h3>
           <div class="flex justify-center gap-6 mt-4 text-xl text-black">
             <a href="tel:+918089007787" aria-label="Call"><i class="fa-solid fa-phone"></i></i></a>
-            <a href="https://wa.me/919645677787" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/918089007787" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://maps.app.goo.gl/fTrXUvRN6iezUdo48" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
           </div>
         </div>
@@ -230,8 +268,8 @@
         <div class="bg-white rounded-lg shadow-md p-6 text-center">
           <h3 class="text-xl font-semibold mb-2">Kannur</h3>
           <div class="flex justify-center gap-6 mt-4 text-xl text-black">
-            <a href="tel:+918089007787" aria-label="Call"><i class="fa-solid fa-phone"></i></i></a>
-            <a href="https://wa.me/919645677787" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+917025219139" aria-label="Call"><i class="fa-solid fa-phone"></i></i></a>
+            <a href="https://wa.me/917025219139" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://maps.app.goo.gl/TJNATCNDRM8cC2rNA" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
           </div>
         </div>
@@ -242,7 +280,7 @@
           <div class="flex justify-center gap-6 mt-4 text-xl text-black">
             <a href="tel:+918089007787" aria-label="Call"><i class="fa-solid fa-phone"></i></i></a>
             <a href="https://wa.me/919645677787" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://maps.app.goo.gl/fTrXUvRN6iezUdo48" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="https://maps.app.goo.gl/TjYdSyHQCMJxhK4E7" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
           </div>
         </div>
 
