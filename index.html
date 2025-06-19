@@ -59,6 +59,11 @@
     .flipped .card-inner {
       transform: rotateY(180deg);
     }
+    .model-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -109,11 +114,11 @@
 
       <div class="card-flip relative cursor-pointer w-full min-h-[22rem]" onclick="this.classList.toggle('flipped')">
         <div class="card-inner w-full h-full relative">
-          <div class="card-front relative pt-16 sm:pt-10">
-            <div class="absolute -top-10 sm:-top-12 left-1/2 transform -translate-x-1/2 w-[80%] sm:w-[90%]">
-              <img src="nozzel.png" alt="Nozzel" class="w-full object-contain">
+          <div class="card-front relative pt-16 sm:pt-10 md:pt-6">
+            <div class="absolute -top-10 sm:-top-12 md:-top-16 left-1/2 transform -translate-x-1/2 w-[80%] sm:w-[90%]">
+              <img src="nozzel.png" alt="Nozzel" class="w-full object-contain model-image">
             </div>
-            <div class="p-4 text-center mt-36 sm:mt-40">
+            <div class="p-4 text-center mt-36 sm:mt-40 md:mt-44">
               <h3 class="text-xl font-semibold mb-2">Nozzel →</h3>
             </div>
           </div>
@@ -131,11 +136,13 @@
       </div>
       
 
-      <div class="card-flip relative cursor-pointer w-full h-72" onclick="this.classList.toggle('flipped')">
+      <div class="card-flip relative cursor-pointer w-full min-h-[22rem]" onclick="this.classList.toggle('flipped')">
         <div class="card-inner w-full h-full relative">
-          <div class="card-front">
-            <img src="booster.png" alt="Booster" class="w-full h-48 object-cover rounded">
-            <div class="p-4 text-center">
+          <div class="card-front relative pt-16 sm:pt-10 md:pt-6">
+            <div class="absolute -top-10 sm:-top-12 md:-top-16 left-1/2 transform -translate-x-1/2 w-[80%] sm:w-[90%]">
+              <img src="booster.png" alt="Booster" class="w-full object-contain model-image">
+            </div>
+            <div class="p-4 text-center mt-36 sm:mt-40 md:mt-44">
               <h3 class="text-xl font-semibold mb-2">Booster →</h3>
             </div>
           </div>
@@ -152,11 +159,13 @@
         </div>
       </div>
 
-      <div class="card-flip relative cursor-pointer w-full h-72" onclick="this.classList.toggle('flipped')">
+      <div class="card-flip relative cursor-pointer w-full min-h-[22rem]" onclick="this.classList.toggle('flipped')">
         <div class="card-inner w-full h-full relative">
-          <div class="card-front">
-            <img src="alfa.png" alt="Alfa" class="w-full h-48 object-cover rounded">
-            <div class="p-4 text-center">
+          <div class="card-front relative pt-16 sm:pt-10 md:pt-6">
+            <div class="absolute -top-10 sm:-top-12 md:-top-16 left-1/2 transform -translate-x-1/2 w-[80%] sm:w-[90%]">
+              <img src="alfa.png" alt="Alfa" class="w-full object-contain model-image">
+            </div>
+            <div class="p-4 text-center mt-36 sm:mt-40 md:mt-44">
               <h3 class="text-xl font-semibold mb-2">Alfa →</h3>
             </div>
           </div>
@@ -173,11 +182,13 @@
         </div>
       </div>
 
-      <div class="card-flip relative cursor-pointer w-full h-72" onclick="this.classList.toggle('flipped')">
+      <div class="card-flip relative cursor-pointer w-full min-h-[22rem]" onclick="this.classList.toggle('flipped')">
         <div class="card-inner w-full h-full relative">
-          <div class="card-front">
-            <img src="vespro.webp" alt="Vespro" class="w-full h-48 object-cover rounded">
-            <div class="p-4 text-center">
+          <div class="card-front relative pt-16 sm:pt-10 md:pt-6">
+            <div class="absolute -top-10 sm:-top-12 md:-top-16 left-1/2 transform -translate-x-1/2 w-[80%] sm:w-[90%]">
+              <img src="vespro.webp" alt="Vespro" class="w-full object-contain model-image">
+            </div>
+            <div class="p-4 text-center mt-36 sm:mt-40 md:mt-44">
               <h3 class="text-xl font-semibold mb-2">Vespro →</h3>
             </div>
           </div>
